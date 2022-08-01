@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: azure;
+  font-family: 'Inter', sans-serif;
+}
+
+.container{
+  min-height: 200px;
+  width: 75%;
+  border-radius: 10px;
+  background-color: white;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 2px rgba(128, 128, 128, 0.218);
+  transition: .3s ease box-shadow;
+}
+
+.container:hover{
+  box-shadow: 0 0 4px gray;
+}
+
+.container h3{
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.container .form{
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.container .form .form-left{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.container .form .form-left input{
+  height: 45px;
+  margin-right: 20px;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: rgb(75, 75, 75);
+  padding: 0 20px;
+  transition: .1s ease outline;
+}
+
+.container .form .form-left label{
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+.container .form .form-left .input-num{
+  margin-top: 10px;
+  padding: 0 5px;
+  font-size: .8rem;
+}
+
+.container .form .form-left input:focus{
+  outline: 2px solid black;
+}
+
+.container .form .form-btn{
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 255, 0.75);
+  color: whitesmoke;
+  transition: .3s ease background-color;
+  font-weight: bold;
+}
+
+.container .form .form-btn:hover{
+  background-color: blue;
+}
+
+.container .table{
+  margin-top: 50px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate; 
+  border-spacing: 0 10px; 
+  overflow: hidden;
+  border-radius: 1px;
+  margin-bottom: 20px;
+}
+
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+}
+
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px; 
+  border-top-right-radius: 10px; 
+}
+
+
+.container .table td{
+  text-transform: capitalize;
+  border: solid 1px #000;
+  border-style: solid none;
+  padding: 10px;
+  background-color: azure;
+}
+
+.container .table th{
+  font-size: 1.2rem;
+}
+
+.container .table tr{
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.container .table i{
+  cursor: pointer;
+  transition: .6s ease color;
+}
+
+.container .table i:nth-child(1){
+  margin-right: 10px;
+  color: rgba(0, 128, 0, 0.816);
+  font-size: 1.2rem;
+}
+
+.container .table .td-icons{
+  display: flex;
+  justify-content: space-evenly;
+  height: 45px;
+  align-items: center;
+}
+
+.container .table i:nth-child(2){
+  margin-right: 10px;
+  color: rgba(255, 0, 0, 0.741);
+  font-size: 1.5rem;
+}
+
+.container .table i:nth-child(1):hover{
+  color: green;
+}
+
+.container .table i:nth-child(2):hover{
+  color: red;
+}
+
+.container .table .edited td{
+  background-color: rgba(95, 158, 160, 0.799);
+}
+
+.container .adding, 
+.container .removing,
+.container .editing{
+  height: 30px;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: smooth-display-appear;
+  animation-duration: .6s;
+}
+
+.container .adding{
+  background-color: rgb(0, 233, 0);
+  color: green;
+  border: 1px solid green;
+}
+
+.container .removing{
+  background-color: rgb(251, 70, 70);
+  color: rgb(121, 0, 0);
+  border:  1px solid rgb(121, 0, 0);;
+}
+
+.container .editing{
+  background-color:rgb(0, 233, 0) ;
+  color: black;
+  border: 1px solid black;
+}
+
+@keyframes smooth-display-appear {
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: .5;
+  }
+
+  100%{
+    opacity: 1;
+  }
+  
+}
+
